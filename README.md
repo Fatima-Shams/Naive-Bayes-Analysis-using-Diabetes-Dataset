@@ -113,7 +113,7 @@ sns.boxplot(data['Age'])
 
 
 
-# As we can see, there are still outliers in columns Skin Thickness and Insulin. Lets try manipulating the percentile values.
+#As we can see, there are still outliers in columns Skin Thickness and Insulin. Lets try manipulating the percentile values.
 data['SkinThickness']=data['SkinThickness'].clip(lower=data['SkinThickness'].quantile(0.07), upper=data['SkinThickness'].quantile(0.93))
 data['Insulin']=data['Insulin'].clip(lower=data['Insulin'].quantile(0.21), upper=data['Insulin'].quantile(0.80))
 plt.figure(figsize= (20,15))
@@ -125,7 +125,7 @@ sns.boxplot(data['Insulin'])
 
 
 
-# Lets start by understanding the distribution diabitic Vs Non Diabitic patients in the data set.
+#Lets start by understanding the distribution diabitic Vs Non Diabitic patients in the data set.
 
 sns.countplot(data['Outcome'])
 
